@@ -6,12 +6,11 @@ import axios from 'axios';
 
 function App() {
 let [galleryList, setGalleryList] = useState([]);
-// let [likesCount, setLikesCount]= useState(0);
 
 useEffect(() => {
   console.log('In useEffect');
   getGallery();
-  likedPhoto();
+  // likedPhoto();
 }, []);
 
 //GET REQUEST TO SERVER TO PULL PICTURES
