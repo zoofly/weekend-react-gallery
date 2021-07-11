@@ -3,8 +3,21 @@ import "../GalleryItem/GalleryItem.css";
 
 function GalleryItem(props){
     const [likesCount, setLikesCount] = useState(0);
+    const [description, setDescription] = useState(true);
+
+
+    //toggle to show or hide photo description
+    const toggleDescription = () =>{
+        console.log('Displaying photo description', description);
+        //set state of description
+        setDescription(!description);
+        
+
+    }
+    
+
     function likeHandler(id){
-        console.log('likeHandeler');
+        console.log('likeHandler');
         // const increaseLikes = () =>{
             setLikesCount (likesCount+1);
         }
@@ -12,8 +25,12 @@ function GalleryItem(props){
     
 
     return(
-        <section>
-            <img src={`${props.path}`}></img>
+        <section className='photoGallery'>
+            { !description ?
+                    <p onClick={() => toggleDescription()}>{props.description}</p> :
+                    <img src={`${props.path}`} onClick={() => toggleDescription()} ></img>
+                }
+            
             <br></br>
             <button id='likeBtn' onClick= {() => likeHandler(props.id)}>Like!</button>
             <p> Likes: {likesCount} </p>

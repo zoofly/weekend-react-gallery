@@ -27,7 +27,6 @@ const getGallery =() => {
 // //PUT REQUEST TO UPDATE COUNTER
 const likedPhoto = (id) => {
     console.log('Liked photo')
-
     axios.put(`/gallery/like/${id}`, )
     .then((response) =>{
     console.log('Successfully liked photo', response);
