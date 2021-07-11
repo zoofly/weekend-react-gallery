@@ -6,11 +6,12 @@ import axios from 'axios';
 
 function App() {
 let [galleryList, setGalleryList] = useState([]);
-let [likesCount, setLikesCount]= useState(0);
+// let [likesCount, setLikesCount]= useState(0);
 
 useEffect(() => {
   console.log('In useEffect');
   getGallery();
+  likedPhoto();
 }, []);
 
 //GET REQUEST TO SERVER TO PULL PICTURES
@@ -24,9 +25,17 @@ const getGallery =() => {
   })
 }
 
-//PUT REQUEST TO UPDATE COUNTER
-const likedPhoto = () => {
-    axios.put(`/gallery/${photoId}`,)
+// //PUT REQUEST TO UPDATE COUNTER
+const likedPhoto = (id) => {
+    console.log('Liked photo')
+
+    axios.put(`/gallery/like/${id}`, )
+    .then((response) =>{
+    console.log('Successfully liked photo', response);
+    getGallery();
+    }) .catch((error)=>{
+      console.log('Unable to like photo', error);
+    })
 }
 
     return (
@@ -35,7 +44,9 @@ const likedPhoto = () => {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <h2>My Life in Pictures</h2>
-        <GalleryList list={galleryList}/>
+        <GalleryList list={galleryList}
+        likedPhoto={likedPhoto}
+        />
       </div>
     );
 }
