@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import "../GalleryItem/GalleryItem.css";
 
 function GalleryItem(props){
     
