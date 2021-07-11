@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
 import axios from 'axios';
 
 
