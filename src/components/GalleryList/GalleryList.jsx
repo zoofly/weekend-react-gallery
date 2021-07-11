@@ -1,26 +1,17 @@
 function GalleryList (props){
     return(
-		<>
+        <div>
         <h2>My Life in Pictures</h2>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {props.list.map(galleryItems => (
-              <tr key={galleryItems.id}>
-                <td>{galleryItems.path}</td>
-                <td>{galleryItems.likes}</td>
-                <td><button>Like</button></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </>
-    )
-}
+            {props.list.map(galleryItems =>
+            <section>
+                <p> key={galleryItems.id}</p>
+                <p>{galleryItems.path}</p>
+                <p>{galleryItems.likes}</p>
+                <p><button>Like</button></p>
+            </section>
+        </div>
+        )}
+ }
 
 
 
