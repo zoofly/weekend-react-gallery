@@ -9,8 +9,8 @@ const galleryItems = [
     { id: 8, path: 'images/myHeartandSoul.jpg', description: 'My girlfriend, Nancy, and me at the tattoo convention.', likes: 0 },
     { id: 9, path: 'images/OnyxontheWater.jpg', description: 'The view is beautiful... She is my view.', likes: 0 },
     { id: 10, path: 'images/rockAesthetics.jpg', description: 'A photo of a rock ridge on the St. Croix river.', likes: 0 },
-    { id: 11, path: 'images/rocksFormation.jpg', description: 'Look at this beautiful rock formation. Taken on the St. Croix river.', likes: 0 }
-
+    { id: 11, path: 'images/rocksFormation.jpg', description: 'Look at this beautiful rock formation. Taken on the St. Croix river.', likes: 0 },
+    { id: 12, path: 'images/itMe.jpg', description: 'A picture of me.', likes: 0 }
 
 ];
 
