@@ -25,16 +25,18 @@ function GalleryItem(props){
     
 
     return(
+        <div>
         <section className='photoGallery'>
             { !description ?
                     <p onClick={() => toggleDescription()}>{props.description}</p> :
                     <img src={`${props.path}`} onClick={() => toggleDescription()} ></img>
                 }
-            
+        
             <br></br>
             <button id='likeBtn' onClick= {() => likeHandler(props.id)}>Like!</button>
             <p> Likes: {likesCount} </p>
         </section>
+        </div>
     )
 }
 
